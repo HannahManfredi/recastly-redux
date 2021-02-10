@@ -23,8 +23,6 @@ var handleVideoSearch = (q) => {
     searchYouTube(optionsObj, cb);
 
   };
-
-
 };
 
 export default handleVideoSearch;

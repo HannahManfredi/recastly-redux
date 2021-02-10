@@ -37,7 +37,7 @@ export var mockYouTubeApi = function (callback) {
 };
 
 export var mockThunk = function(x) {
-  // return function(dispatch) {
+  return function(dispatch) {
     setTimeout(function() {
       dispatch({
         type: 'CHANGE_VIDEO',
