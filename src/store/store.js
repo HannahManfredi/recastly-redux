@@ -3,11 +3,12 @@ import thunk from 'redux-thunk';
 import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
-// TODO:  Create your redux store, apply thunk as a middleware, and export it!
+const preloadedState = {
+  videoList: exampleVideoData,
+  currentVideo: exampleVideoData[0]
+};
+
+const store = createStore(rootReducer, preloadedState, applyMiddleware(thunk));
 
 
-// our state needs to have 3 props
-// videoList
-// video
-//query/search term
-
+export default store;
